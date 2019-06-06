@@ -22,8 +22,7 @@ class Student {
 
 
    public:
-      Student() : daysToCompleteCourses(3) {};
-
+      Student();
       void   SetStudentId(string id);
       void   SetFirstName(string first);
       void   SetLastName(string last);
@@ -36,8 +35,8 @@ class Student {
       string GetFirstName();
       string GetLastName();
       string GetEmailAddress();
-      int    GetAge();
-      int    GetDaysToCompleteCourses();
+      void   GetAge() const;
+      void   GetDaysToCompleteCourses();
       string GetDegreeType();
 
 

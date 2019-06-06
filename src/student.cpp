@@ -6,6 +6,12 @@ using namespace std;
 
 #include "student.h"
 
+
+
+Student::Student(){
+  daysToCompleteCourses.resize(3);
+}
+
 //Set Functions
 void   Student::SetStudentId(string id) {
     studentId = id;
@@ -39,7 +45,7 @@ void   Student::SetDaysToCompleteCourses(int c1, int c2, int c3) {
     return;
 }
 
-void   Student::SetDegreeType(int degree) {
+void   Student::SetDegreeType(string degree) {
     degreeType = degree;
     return;
 }
@@ -61,12 +67,21 @@ string Student::GetEmailAddress() {
     return emailAddress;
 }
 
-int    Student::GetAge() {
-    return age;
+void   Student::GetAge() const{
+    cout << age << endl;;
+    return;
 }
 
-int    Student::GetDaysToCompleteCourses() {
-    return daysToCompleteCourses;
+void    Student::GetDaysToCompleteCourses() {
+    cout << "Days to complete courses: ";
+    for (int i=0; i<daysToCompleteCourses.size(); i++){
+      cout << daysToCompleteCourses.at(i);
+      if (i != daysToCompleteCourses.size() - 1){
+      cout << ", ";
+      }
+    }
+    cout << "." << endl;
+    return;
 }
 
 string Student::GetDegreeType() {
