@@ -22,12 +22,16 @@ class Student {
 
 
    public:
-      Student();
+      Student(
+        string id,string first,string last,
+        string email,int age,int c1,
+        int c2,int c3,string degree
+      );
       void   SetStudentId(string id);
       void   SetFirstName(string first);
       void   SetLastName(string last);
       void   SetEmailAddress(string email);
-      void   SetAge(int ageYears);
+      void   SetAge(int age);
       void   SetDaysToCompleteCourses(int c1, int c2, int c3);
       void   SetDegreeType(string degree);
 
@@ -37,7 +41,7 @@ class Student {
       string GetEmailAddress();
       void   GetAge() const;
       void   GetDaysToCompleteCourses();
-      string GetDegreeType();
+      string GetDegreeProgram();
 
 
 };

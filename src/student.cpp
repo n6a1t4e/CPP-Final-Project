@@ -8,8 +8,19 @@ using namespace std;
 
 
 
-Student::Student(){
+Student::Student(
+  string id,string first,string last,
+  string email,int age,int c1,
+  int c2,int c3,string degree
+){
   daysToCompleteCourses.resize(3);
+  SetStudentId(id);
+  SetFirstName(first);
+  SetLastName(last);
+  SetEmailAddress(email);
+  SetAge(age);
+  SetDaysToCompleteCourses(c1,c2,c3);
+  SetDegreeType(degree);
 }
 
 //Set Functions
@@ -84,6 +95,6 @@ void    Student::GetDaysToCompleteCourses() {
     return;
 }
 
-string Student::GetDegreeType() {
+string Student::GetDegreeProgram() {
     return degreeType;
 }
